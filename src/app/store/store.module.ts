@@ -1,3 +1,4 @@
+import { CartSummaryComponent } from './cartSummary';
 import { StoreComponent } from './store.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { ModelModule } from './../model/model.module';
@@ -7,7 +8,7 @@ import { CounterDirective } from './counter.directive';
 
 @NgModule({
     imports: [ModelModule, BrowserModule, FormsModule],
-    declarations: [StoreComponent, CounterDirective],
+    declarations: [StoreComponent, CounterDirective, CartSummaryComponent],
     exports: [StoreComponent]
 })
 export class StoreModule { }
