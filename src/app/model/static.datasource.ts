@@ -23,7 +23,7 @@ export class StaticDataSource {
         new Product(15, "Product 15", "Category 3", "Product 15 (Category 3)", 100),
     ]
 
-    getPoducts(): Observable<Product[]> {
+    getProducts(): Observable<Product[]> {
         return from([this.products]);
     }
 
