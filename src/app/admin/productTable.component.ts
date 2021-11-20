@@ -3,7 +3,7 @@ import { ProductRepository } from './../model/product.repository';
 import { Component } from "@angular/core";
 
 @Component({
-    template: "productTable.component.html"
+    templateUrl: "productTable.component.html"
 })
 export class ProductTablerComponent {
     constructor(private repository: ProductRepository) { }
