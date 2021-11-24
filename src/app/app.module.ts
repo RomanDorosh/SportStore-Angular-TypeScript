@@ -8,6 +8,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { StoreModule } from './store/store.module';
 import { RouterModule } from '@angular/router';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   imports: [BrowserModule, StoreModule,
@@ -31,7 +33,8 @@ import { RouterModule } from '@angular/router';
         canActivate: [StoreFirstGuard]
       },
       { path: "**", redirectTo: "/store" }
-    ])],
+    ]),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [StoreFirstGuard],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
